@@ -7,10 +7,10 @@ from nltk.stem import WordNetLemmatizer
 import google.generativeai as genai
 
 # 🔽 Initialisation et téléchargements NLTK
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
-nltk.download('stopwords')
-nltk.download('wordnet')
+#nltk.download('punkt')
+#nltk.download('averaged_perceptron_tagger')
+#nltk.download('stopwords')
+#nltk.download('wordnet')
 
 # 🔽 Lecture du texte source
 with open("corpus.txt", 'r', encoding='utf-8') as f:
