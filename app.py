@@ -13,7 +13,7 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 
 # 🔽 Lecture du texte source
-with open("/home/isaac-tikpa/Bureau/Chatbot/corpus.txt", 'r', encoding='utf-8') as f:
+with open("corpus.txt", 'r', encoding='utf-8') as f:
     data = f.read().replace('\n', ' ')
 
 # 🔽 Tokenisation en phrases
