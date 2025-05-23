@@ -5,7 +5,12 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import google.generativeai as genai
+import os
+import nltk
+from nltk.tokenize import sent_tokenize
 
+# 🔽 Télécharger les ressources NLTK nécessaires
+nltk.download("punkt")
 # 🔽 Initialisation et téléchargements NLTK
 #nltk.download('punkt')
 #nltk.download('averaged_perceptron_tagger')
@@ -46,6 +51,8 @@ def get_most_relevant_sentence(query):
     return best_sentence, max_similarity
 
 # 🔽 Configuration de l'API Gemini (Google)
+# 🔽 Configuration sécurisée de l'API Gemini
+api_key = os.getenv("AIzaSyDjYySZqgpDZElWKLKP_lGFptqEGpO_e1E")
 genai.configure(api_key="AIzaSyDjYySZqgpDZElWKLKP_lGFptqEGpO_e1E")
 
 model = genai.GenerativeModel("gemini-1.5-flash")  # ou gemini-pro
